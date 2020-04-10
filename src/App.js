@@ -12,7 +12,7 @@ class App extends Component {
         "April",
         "Max",
         "Mark",
-        "Natasha",
+        "Stas",
         "Mike",
         "Peter",
         "Nelson",

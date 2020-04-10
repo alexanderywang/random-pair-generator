@@ -6,17 +6,17 @@ class App extends Component {
     this.state = {
       grads: [
         "Alex",
-        "Leslie",
-        "Thomas",
+        "Stas",
         "Yan",
         "April",
         "Max",
-        "Mark",
-        "Stas",
-        "Mike",
-        "Peter",
+        "mark",
+        "Mike D",
         "Nelson",
-        "Manny"
+        "AAron",
+        "Carlos",
+        "Leslie",
+        "Peter"
       ],
       pairs: []
     };
@@ -24,7 +24,7 @@ class App extends Component {
 
   randomize = () => {
     let array = this.state.grads;
-    for (let i = 0; i < array.length - 1; i++) {
+    for (let i = 0; i < array.length; i++) {
       let j = Math.floor(Math.random() * (i + 1));
       let temp = array[i];
       array[i] = array[j];
@@ -49,6 +49,15 @@ class App extends Component {
     return (
       <div className="App">
         <h2>Full Stack RANDOM Algo Pairs</h2>
+
+        <h3>LEAD INSTRUCTOR:</h3>
+        <h3>
+          {
+            this.state.grads[
+              Math.round(Math.random() * this.state.grads.length)
+            ]
+          }
+        </h3>
 
         <button onClick={this.randomize}>Make pairs</button>
         {this.state.pairs.map((pair, i) => (
